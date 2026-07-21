@@ -1,4 +1,4 @@
-นักเรียน
+st.writest("นักเรียน")
 import streamlit as st
 # ส่วนหัวข้อเว็บ (Header)
 st.title("ยินดีต้อนรับสู่โปรไฟล์ของฉัน ✨") 
