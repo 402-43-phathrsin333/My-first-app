@@ -1,3 +1,4 @@
+
 import time
 import streamlit as st
 
@@ -46,7 +47,8 @@ def show_result_dialog(ans1, ans2):
     # ✏️ [พื้นที่สำหรับนักเรียน]: เพิ่มตรวจข้อ 3, 4 ตรงนี้
 
     st.info(f"🏆 ได้คะแนนรวม: {score} คะแนน")
-if score == 2:
+
+    if score == 2:
         st.success("🎉 You win!")
     else:
         st.error("💀 You lose!")
@@ -100,6 +102,6 @@ if st.session_state.get("is_ended", False):
     show_result_dialog(ans1, ans2)
 
 st.divider()
-st.write("นายภัทรสิน ศิลธรรม เลขที่ 43 ม.4/2")
+st.write("นาย ภัทรสิน ศิลธรรม เลขที่ 43 ม.4/2")
 
 
