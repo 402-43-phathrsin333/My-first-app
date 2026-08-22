@@ -1,4 +1,3 @@
-
 import time
 import streamlit as st
 
@@ -13,7 +12,6 @@ if "ans3_val" not in st.session_state:
     st.session_state.ans3_val = ""
 if "ans4_val" not in st.session_state:
     st.session_state.ans4_val = ""
-
 
 
 # 📌 ฟังก์ชันเคลียร์ค่าเมื่อกดปุ่มเริ่มใหม่
@@ -33,36 +31,34 @@ def reset_game():
 def show_result_dialog(ans1, ans2, ans3, ans4):
     st.balloons()
     score = 0
+    
     # ตรวจข้อ 1
-    if u_ans1 == "apple":
+    if ans1.strip().lower() == "apple":
         st.success("✅ ข้อ 1: ถูกต้อง")
         score += 1
     else:
-        st.error(f"❌ ข้อ 1: ยังไม่ถูกต้อง (คุณตอบ '{u_ans1}')")
+        st.error(f"❌ ข้อ 1: ยังไม่ถูกต้อง (คุณตอบ '{ans1}')")
 
     # ตรวจข้อ 2
-    if u_ans2 == "fish":
+    if ans2.strip().lower() == "fish":
         st.success("✅ ข้อ 2: ถูกต้อง")
         score += 1
     else:
-        st.error(f"❌ ข้อ 2: ยังไม่ถูกต้อง (คุณตอบ '{u_ans2}')")
+        st.error(f"❌ ข้อ 2: ยังไม่ถูกต้อง (คุณตอบ '{ans2}')")
 
     # ตรวจข้อ 3
-    if u_ans3 == "banana":
+    if ans3.strip().lower() == "banana":
         st.success("✅ ข้อ 3: ถูกต้อง")
         score += 1
     else:
-        st.error(f"❌ ข้อ 3: ยังไม่ถูกต้อง (คุณตอบ '{u_ans3}')")
+        st.error(f"❌ ข้อ 3: ยังไม่ถูกต้อง (คุณตอบ '{ans3}')")
 
     # ตรวจข้อ 4
-    if u_ans4 == "givi":
+    if ans4.strip().lower() == "kiwi":
         st.success("✅ ข้อ 4: ถูกต้อง")
         score += 1
     else:
-        st.error(f"❌ ข้อ 4: ยังไม่ถูกต้อง (คุณตอบ '{u_ans4}')")
-
-
-    # ✏️ [พื้นที่สำหรับนักเรียน]: เพิ่มตรวจข้อ 3, 4 ตรงนี้
+        st.error(f"❌ ข้อ 4: ยังไม่ถูกต้อง (คุณตอบ '{ans4}')")
 
     st.info(f"🏆 ได้คะแนนรวม: {score} คะแนน")
 
@@ -99,19 +95,19 @@ ans2 = st.text_input(
     value=st.session_state.ans2_val,
 )
 ans3 = st.text_input(
-    "ข้อ 3: Cats love to eat `ba_ _ na`wow ",
+    "ข้อ 3: The monkey likes `ba _ _ na`. 🍌",
     value=st.session_state.ans3_val,
 )
 ans4 = st.text_input(
-    "ข้อ 4: Cats love to eat `gi_i`good ",
+    "ข้อ 4: It looks like a mini coconut `ki _ i`. 🥝",
     value=st.session_state.ans4_val,
+)  # เติมวงเล็บปิดที่หายไป
 
-# อัปเดตค่าล่าสุดเข้าตัวแปร
+# อัปเดตค่าล่าสุดเข้าตัวแปร session_state
 st.session_state.ans1_val = ans1
 st.session_state.ans2_val = ans2
 st.session_state.ans3_val = ans3
 st.session_state.ans4_val = ans4
-# ✏️ [พื้นที่สำหรับนักเรียน]: เพิ่มข้อ 3, 4 ตรงนี้
 
 
 # 4. ปุ่มส่งคำตอบ
@@ -129,5 +125,3 @@ if st.session_state.get("is_ended", False):
 
 st.divider()
 st.write("นาย ภัทรสิน ศิลธรรม เลขที่ 43 ม.4/2")
-
-
