@@ -1,7 +1,7 @@
 import time
 import streamlit as st
 
-st.title("⏱️ เกมส์ทายประเทศ")
+st.title("⏱️ เกมส์ทายชื่อประเทศภาษาอังกฤษ")
 
 # รายชื่อประเทศและคำตอบเฉลย (10 ข้อ)
 QUESTIONS = [
