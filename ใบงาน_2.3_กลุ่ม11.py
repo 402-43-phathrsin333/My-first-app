@@ -10,11 +10,6 @@ QUESTIONS = [
     {"label": "ข้อ 3: เกาหลีใต้", "answer": "south korea"},
     {"label": "ข้อ 4: จีน", "answer": "china"},
     {"label": "ข้อ 5: สิงคโปร์", "answer": "singapore"},
-    {"label": "ข้อ 6: เวียดนาม", "answer": "vietnam"},
-    {"label": "ข้อ 7: อินเดีย", "answer": "india"},
-    {"label": "ข้อ 8: ฝรั่งเศส", "answer": "france"},
-    {"label": "ข้อ 9: เยอรมนี", "answer": "germany"},
-    {"label": "ข้อ 10: อิตาลี", "answer": "italy"},
 ]
 
 # 1. กำหนดค่าเริ่มต้นใน session_state
